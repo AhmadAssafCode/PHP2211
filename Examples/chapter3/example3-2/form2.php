@@ -16,8 +16,8 @@
     <?php }  //end if
     else {  ?>
         <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
-            Name: <input type="text" name="name"><br>
-            E-mail: <input type="text" name="email"><br>
+            Name: <input type="text" name="name"><br><br>
+            E-mail: <input type="text" name="email"><br><br>
             <input type="submit" name="submit">
         </form>
     <?php } //end else 
