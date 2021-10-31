@@ -40,22 +40,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 ?>
 
 <body>
-    < <h2>Example 3-3: PHP Form Validation</h2>
-        <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
-            Name: <input type="text" name="name" value="<?= $name ?>">
-            <span class="error">* <?php echo $nameRrr; ?></span>
-            <br><br>
+    <h2>Example 3-3: PHP Form Validation</h2>
+    <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
+        Name: <input type="text" name="name" value="<?= $name ?>">
+        <span class="error">* <?php echo $nameRrr; ?></span>
+        <br><br>
 
-            E-mail: <input type="text" name="email" value="<?= $email ?>">
-            <span class="error">* <?php echo $emailRrr; ?> </span>
-            <br><br>
-            <input type="submit">
-        </form>
-        <h2>Your Data </h2>
-        <?php //show data
-        echo "Name: $name <br/>";
-        echo "Email: $email<br/>";
-        ?>
+        E-mail: <input type="text" name="email" value="<?= $email ?>">
+        <span class="error">* <?php echo $emailRrr; ?> </span>
+        <br><br>
+        <input type="submit">
+    </form>
+    <h2>Your Data </h2>
+    <?php //show data
+    echo "Name: $name <br/>";
+    echo "Email: $email<br/>";
+    ?>
 </body>
 
 </html>
