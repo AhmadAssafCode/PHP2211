@@ -1,6 +1,7 @@
 <html>
 
 <head>
+    <title>Form Validation</title>
     <style>
         .error {
             color: #FF0000;
@@ -9,13 +10,10 @@
 </head>
 
 <?php   //Form Validation Example by Ahmad Assaf
-$nameRrr = '';
-$emailRrr = '';
-$genderErr = '';
 
-$name = '';
-$email = '';
-$gender = '';
+//define variables
+$nameRrr = $emailRrr = $genderErr = '';
+$name = $email = $gender = '';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -43,12 +41,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $gender = $_POST["gender"];
     //===========end gender validation ====================		
 
-
 } //end if
 ?>
 
 <body>
-    <h2>PHP Form Validation</h2>
+    <h2>Example 3-4: PHP Form Validation</h2>
     <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
         Name: <input type="text" name="name" value="<?= $name ?>">
         <span class="error">* <?php echo $nameRrr; ?></span>
@@ -68,6 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </form>
 
     <h2>Your Data </h2>
+    
     <?php //show data
     echo "Name: $name <br/>";
     echo "Email: $email<br/>";

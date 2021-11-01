@@ -20,6 +20,13 @@
     }
 
     ?>
+  
+    
+    <ul>
+   <b> Links:</b>
+<li>http://www.formget.com/form-validation-using-php/</li>
+<li>https://www.w3schools.com/php/php_form_required.asp</li>
+</ul>
 </body>
 
 </html>
