@@ -1,13 +1,5 @@
-<html>
+Code Reference 3
 
-<head>
-    <title>Code Reference 3</title>
-
-</head>
-
-
-<body>
-    <h2>Code Reference 3</h2>
     <?php
 
     //check if e-mail address formate is valid or not
@@ -20,13 +12,8 @@
     }
 
     ?>
-  
     
-    <ul>
-   <b> Links:</b>
-<li>http://www.formget.com/form-validation-using-php/</li>
-<li>https://www.w3schools.com/php/php_form_required.asp</li>
-</ul>
-</body>
-
-</html>
+    
+Links:
+http://www.formget.com/form-validation-using-php/</li>
+https://www.w3schools.com/php/php_form_required.asp</li>
