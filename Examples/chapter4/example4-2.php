@@ -2,64 +2,41 @@
 <html>
 
 <body>
-  <table style='border: solid 1px black;'>
-    <tr>
-      <th>Id</th>
-      <th>Product</th>
-      <th>Description</th>
-      <th>Price</th>
-    </tr>
-    <?php
+  <?php
+  //Example 4-2
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "db1";
 
+  try {
+    // connect to MYSQL Database using PDO
+    $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    // set the PDO error mode to exception
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    class TableRows extends RecursiveIteratorIterator
-    {
-      function __construct($it)
-      {
-        parent::__construct($it, self::LEAVES_ONLY);
-      }
+    //select query
+    $sql = 'SELECT * FROM products';
+    $query = $pdo->query($sql);
 
-      function current()
-      {
-        return "<td style='width: 150px; border: 1px solid black;'>" . parent::current() . "</td>";
-      }
+    // get all products as associative array
+    $products = $query->fetchAll(PDO::FETCH_ASSOC);
 
-      function beginChildren()
-      {
-        echo "<tr>";
-      }
-
-      function endChildren()
-      {
-        echo "</tr>" . "\n";
+    if ($products) {
+      echo '<h2>List of Products:</h2>';
+      // show the products
+      foreach ($products as $products) {
+        echo $products['id'] . '<br>';
+        echo $products['name'] . '<br>';
+        echo $products['description'] . '<br>';
+        echo $products['price'] . '<br>';
       }
     }
-
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "db1";
-
-    try {
-      $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-      $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-      $stmt = $conn->prepare("SELECT id, name, description,price FROM products");
-      $stmt->execute();
-
-      // set the resulting array to associative
-      $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-
-      foreach (new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k => $v) {
-        echo $v;
-      }
-    } catch (PDOException $e) {
-      echo "Error: " . $e->getMessage();
-    }
-   // $conn = null;
-    ?>
-
-  </table>
-
+  } catch (PDOException $e) {
+    echo "Error: " . $e->getMessage();
+  }
+    $pdo = null; //close PDO connection 
+  ?>
 </body>
 
 </html>
