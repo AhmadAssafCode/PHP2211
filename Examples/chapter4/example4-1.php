@@ -33,6 +33,7 @@
         echo '-----------------------------<br>';
       }
     }
+    //catch errors
   } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();
   }
