@@ -14,7 +14,7 @@
     $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     // set the PDO error mode to exception
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $cid=2;
+    $cid=3;
 
     //select query
     $sql = 'SELECT * FROM products WHERE cat_id = ?';
