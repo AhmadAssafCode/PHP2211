@@ -3,7 +3,7 @@
 
 <body>
   <?php
-  //Example 4-7
+  //Example 4-8
   $servername = "localhost";
   $username = "root";
   $password = "";
@@ -15,15 +15,20 @@
     // set the PDO error mode to exception
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    //Update record 5
-    $id = 5;
-    $sql = 'UPDATE products SET name=:name,price=:price,cat_id=:cid
-    WHERE id=:id';
+    //Delete record 7
+    $id = 7;
+    $sql = 'DELETE FROM products WHERE id=?';
+    // prepare the statement for execution
     $statement = $pdo->prepare($sql);
-    $res = $statement->execute([':id' => $id, ':name' => 'Laptop 8888', ':price' => 7000, ':cid' => 1]);
-    if ($res) {
-      echo "The product $id has been updated successfully!";
+    // $statement->bindParam(':id', $id, PDO::PARAM_INT);
+
+    // execute the statement
+    if ($statement->execute([$id])) {
+      echo 'product id ' . $id . ' was deleted successfully.<br>';
+      $no = $statement->rowCount();
+      echo " No of records deleted = " . $no;
     }
+
     /*     // bind params
     $statement->bindParam(':publisher_id', $publisher['publisher_id'], PDO::PARAM_INT);
     $statement->bindParam(':name', $publisher['name']);
@@ -33,8 +38,6 @@
       echo 'The publisher has been updated successfully!';
     }
  */
-
-
   } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();
   }

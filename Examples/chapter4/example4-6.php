@@ -3,7 +3,7 @@
 
 <body>
   <?php
-  //Example 4-4
+  //Example 4-6
   $servername = "localhost";
   $username = "root";
   $password = "";

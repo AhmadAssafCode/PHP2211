@@ -56,7 +56,7 @@
     //select query
     $sql = 'SELECT * FROM products WHERE cat_id = :cid';
     $result = $pdo->prepare($sql);
-    $result->execute([':cid'=>$cid]);
+    $result->execute([':cid' => $cid]);
 
     // get all product records as associative array
     $products = $result->fetchAll(PDO::FETCH_ASSOC);
