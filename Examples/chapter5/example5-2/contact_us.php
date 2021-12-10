@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php $page_title="Home"?>
+<?php $page_title="Contact Us"?>
 
 <?php include("template/head.php");?>
 
@@ -12,30 +12,17 @@
 
 
 <?php include("template/header.php");?>
-<?php include("template/nav.php");?>
 
 <section>
-
+<?php include("template/nav.php");?>
 
   <article>
-    <h1>Home</h1>
+    <h1>Contact Us</h1>
     <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
     <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
   </article>
 </section>
-<div class="container">
-  <div class="row">
-    <div class="col align-self-start">
-      One of three columns
-    </div>
-    <div class="col align-self-center">
-      One of three columns
-    </div>
-    <div class="col align-self-end">
-      One of three columns
-    </div>
-  </div>
-</div>
+
 <?php include("template/footer.php");?>
 
 </body>
