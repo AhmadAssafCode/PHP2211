@@ -9,7 +9,8 @@
   <main>
     <?php
 
-    $imgs = array('img7.jpg', 'img8.jpg', 'img9.jpg', 'img10.jpg', 'img11.jpg', 'img12.jpg');
+    $imgs = array('img1.jpg', 'img2.jpg', 'img3.jpg', 'img4.jpg', 'img5.jpg', 
+    'img6.jpg','img7.jpg','img8.jpg','img9.jpg','img10.jpg','img11.jpg','img12.jpg');
     ?>
 
 <div id="carouselExampleIndicators" class="carousel slide mb-3" data-bs-ride="carousel" >
@@ -21,13 +22,13 @@
   <div class="carousel-inner">
 
     <div class="carousel-item active">
-      <img src="images/<?=$imgs[0]?>" class="d-block w-100 img-fluide"  style="width:100%;height:400px;object-fit:cover;" alt="...">
+      <img src="images/<?=$imgs[7]?>" class="d-block w-100 img-fluide"  style="width:100%;height:600px;object-fit:cover;" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="images/<?=$imgs[1]?>" class="d-block w-100 img-fluide" style="width:100%;height:400px;object-fit:cover;" alt="...">
+      <img src="images/<?=$imgs[8]?>" class="d-block w-100 img-fluide" style="width:100%;height:600px;object-fit:cover;" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="images/<?=$imgs[2]?>" class="d-block w-100 img-fluide" style="width:100%;height:400px;object-fit:cover;" alt="...">
+      <img src="images/<?=$imgs[10]?>" class="d-block w-100 img-fluide" style="width:100%;height:600px;object-fit:cover;" alt="...">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -50,14 +51,14 @@
 
 
     <div class="container">
-      <div class="row">
+      <div class="row  row-cols-1 row-cols-md-2  row-cols-lg-3 row-cols-xl-4" >
       <?PHP
       foreach ($imgs as $img) {
       
       ?>
-        <div class="col-sm-12 col-md-6 col-lg-4">
-          <div class="card " style1="width: 18rem;">
-            <img src="images/<?= $img ?>" class="card-img-top" alt="...">
+        <div class="col">
+          <div class="card " style="min-height: 400px;">
+            <img src="images/<?= $img ?>" class="card-img-top" alt="..." style="height:300px;object-fit:cover;">
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
