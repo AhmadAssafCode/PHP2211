@@ -8,7 +8,7 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="index.php">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Features</a>
@@ -24,7 +24,7 @@
               Dropdown link
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="dashboard.php">dashboard</a></li>
               <li><a class="dropdown-item" href="#">Another action</a></li>
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
@@ -33,7 +33,13 @@
       </div>
       <ul class="navbar-nav ">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="login.php">Login</a>
+          <?php if (isset($_SESSION['username'])) { ?>
+            <span>  <?= $_SESSION['username'] ?></span> | 
+            <a  aria-current="page" href="logout.php">Logout</a>
+          <?php } else {
+          ?>
+            <a  aria-current="page" href="login.php">Login</a>
+          <?php } ?>
         </li>
       </ul>
     </div>
