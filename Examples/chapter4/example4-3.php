@@ -25,19 +25,19 @@
     if ($products) {
       echo '<h2>List of Products:</h2>';
       // show the products
-      foreach ($products as $products) {
-        echo $products['cat_id'] . '<br>';
-        echo $products['id'] . '<br>';
-        echo $products['name'] . '<br>';
-        echo $products['description'] . '<br>';
-        echo $products['price'] . '<br>';
+      foreach ($products as $product) {
+        echo $product['cat_id'] . '<br>';
+        echo $product['id'] . '<br>';
+        echo $product['name'] . '<br>';
+        echo $product['description'] . '<br>';
+        echo $product['price'] . '<br>';
         echo '-----------------------------<br>';
       }
     }
   } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();
   }
-    $pdo = null; //close PDO connection 
+  $pdo = null; //close PDO connection 
   ?>
 </body>
 
