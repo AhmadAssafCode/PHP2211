@@ -21,7 +21,7 @@
   <main>
     <div class="container">
 
-    <h5>Bootstrap 5</h5>
+      <h5>Bootstrap 5</h5>
       <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
       <div class="row1">
 
@@ -43,16 +43,17 @@
         <h5>Margin, Padding, Borders</h5>
 
         <a href="https://www.w3schools.com/bootstrap5/bootstrap_utilities.php">
-        https://www.w3schools.com/bootstrap5/bootstrap_utilities.php
-</a>
-<br>
+          https://www.w3schools.com/bootstrap5/bootstrap_utilities.php
+        </a>
+        <br>
         <br>
         <textarea rows="8" cols="70" disabled>
 <span class="border border-1"></span>
 <span class="border border-2"></span>
 <span class="border border-3"></span>
 <span class="border border-4"></span>
-<span class="border border-5"></span>
+<span class="border border-5 border-danger"></span>
+<span class="border-bottom border-5 border-danger"></span>
 </textarea>
         <br>
         <span class="border border-1"></span>
@@ -60,13 +61,15 @@
         <span class="border border-3"></span>
         <span class="border border-4"></span>
         <span class="border border-5 border-danger"></span>
+        <span class="border-bottom border-5 border-danger"></span>
+
 
 
 
         <br>
         <br>
         <h5>Margin and Padding</h5>
-<pre>
+        <pre>
         Spacing
         Bootstrap 5 has a wide range of responsive margin and padding utility classes. They work for all breakpoints: xs (<=576px), sm (>=576px), md (>=768px), lg (>=992px), xl (>=1200px) or xxl (>=1400px)):
 
