@@ -2,10 +2,10 @@
 <html lang="en">
 <?php $page_title = "Home" ?>
 
-<?php include("templates/head.php"); ?>
+<?php include("includes/head.php"); ?>
 
 <body>
-  <?php include("templates/header.php"); ?>
+  <?php include("includes/header.php"); ?>
   <main>
     <?php
 
@@ -78,7 +78,7 @@
 
     </div>
   </main>
-  <?php include("templates/footer.php"); ?>
+  <?php include("includes/footer.php"); ?>
 
 </body>
 
