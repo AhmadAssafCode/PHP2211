@@ -34,13 +34,17 @@
         <div class="  col-6  py-5 ps-5 bg-success">
           this is column 2
         </div>
-        <div class="col-6 bg-warning ">
+        <div class="col-6 bg-warning py-auto ">
           this is column 3
         </div>
       </div>
 
     </div>
-
+    <div class="row mt-5">
+      <div class="col-3 bg-primary  mx-auto">
+        this is column 1
+      </div>
+    </div>
   </main>
   <?php include("templates/footer.php"); ?>
 
