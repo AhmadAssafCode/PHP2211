@@ -9,7 +9,7 @@
     width: 70px;
     height: 70px;
     margin: 6px;
-    background-color: #f9f9f9;
+    background-color: lightgray;
   }
 </style>
 
@@ -19,6 +19,57 @@
 <body>
   <?php include("templates/header.php"); ?>
   <main>
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="..." class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="..." class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="..." class="d-block w-100" alt="...">
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+    <div class="container mt-3">
+      <h1>Basic Grid Structure</h1>
+      <!-- Control the column width, and how they should appear on different devices -->
+      <div class="row">
+        <div class="col-sm-6 bg-primary text-white border border-5">50%</div>
+        <div class="col-sm-6 bg-dark text-white">50%</div>
+      </div>
+    </div>
+
+    <span class="border border-1"></span>
+    <span class="border border-2"></span>
+    <span class="border border-3"></span>
+    <span class="border border-4"></span>
+    <span class="border border-5"></span>
+    <br>
+
+    <span class="border border-5 border-danger"></span>
+    <span class="border-start border-5 border-danger"></span>
+    <span class="border-top border-5 border-danger"></span>
+    <span class="border-end border-5 border-danger"></span>
+    <span class="border-bottom border-5 border-danger"></span>
+
+    <br>
+    <div class="pt-4 bg-warning">I only have a top padding (1.5rem)</div>
+    <div class="p-5 bg-success">I have a padding on all sides (3rem)</div>
+    <div class="m-5 pb-5 bg-info">I have a margin on all sides (3rem) and a bottom padding (3rem)</div>
+
+
     <div class="container">
 
       <h5>Bootstrap 5</h5>
