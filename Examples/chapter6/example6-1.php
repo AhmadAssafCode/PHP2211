@@ -4,25 +4,24 @@
 // Default Values
 $language = '';
 $color = 'white';
-
+if (isset($_COOKIE['language']))
+    $language = $_COOKIE['language'];
+if (isset($_COOKIE['color']))
+    $color = $_COOKIE['color'];
 // Check if form submission has happened:
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!empty($_POST['language'])) {
         $language = $_POST['language'];
         setcookie('language',  $language); //, time() + (86400 * 30), "/"); // 86400 = 1 day
+
     }
 
     if (!empty($_POST['color'])) {
         $color = $_POST['color'];
-        setcookie('color',  $color); //, time() + (86400 * 30), "/"); // 86400 = 1 day
+        setcookie('color',  $color, time() + (86400 * 30)); // 86400 = 1 day
     }
 }
 
-
-if (isset($_COOKIE['language']))
-    $language = $_COOKIE['language'];
-if (isset($_COOKIE['color']))
-    $color = $_COOKIE['color'];
 
 ?>
 
