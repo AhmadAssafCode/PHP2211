@@ -8,6 +8,7 @@ if (isset($_COOKIE['language']))
     $language = $_COOKIE['language'];
 if (isset($_COOKIE['color']))
     $color = $_COOKIE['color'];
+    
 // Check if form submission has happened:
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!empty($_POST['language'])) {
